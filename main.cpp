@@ -4,7 +4,10 @@ int main() {
     double number1;
     double number2;
     double result;
-    
+    char choice;
+
+    do {
+        
     std::cout<<"***Calculator***"<<std::endl;
     std::cout<<"ENTER operator(+ ,- ,* ,/ ) = ";
     std::cin>>op;
@@ -42,7 +45,14 @@ int main() {
       default:
         std::cout<<"That is not a valid operator ";
         
-        return 0;
-    
     }
+        std::cout<< "DO You Want To continue? (y/n): ";
+        std::cin>>choice;
+    } while (choice=='y' || choice=='Y');
+    if(choice=='n' || choice=='N'){
+    std::cout<<"Calculator closed. Thank you!"<<std::endl;
+}
+
+     return 0;
+    
     }
